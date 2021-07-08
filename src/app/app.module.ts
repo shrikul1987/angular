@@ -18,8 +18,7 @@ import { RouterModule } from '@angular/router';
     FormsModule,
     
     RouterModule.forRoot(
-      [
-        {path: '',component:AppComponent },
+      [        
         {path:'fizzbuzz',component:FizzbuzzComponent},
         {path:'RPSGame', component:RpsgameComponent}
 

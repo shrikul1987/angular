@@ -2,7 +2,7 @@
 
 <div>   
 
-    <input [(ngModel)]="records" type="number" min="1" max="100000" (keyup.enter) ="onChangeNoOfRecords()" /> 
+    <input [(ngModel)]="records" type="number" min="1" max="1000" (keyup.enter) ="onChangeNoOfRecords()" /> 
 
     <div>
         <div *ngFor="let record of noofrecords">
