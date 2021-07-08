@@ -1,0 +1,15 @@
+<p>{{title}} works!!!</p>
+
+<div>   
+
+    <input [(ngModel)]="records" type="number" min="1" max="100000" (keyup.enter) ="onChangeNoOfRecords()" /> 
+
+    <div>
+        <div *ngFor="let record of noofrecords">
+            <label>  {{record%15==0?"FizzBuzz":record%3==0?"Fizz":record%5==0?"Buzz":record}} </label>
+        </div>
+
+    </div>
+ 
+</div>
+

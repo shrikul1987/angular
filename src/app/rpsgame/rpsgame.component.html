@@ -1,0 +1,74 @@
+<div>
+     <table>
+          <tr>
+               <td>
+                    <button (click)="onRock()">Rock</button>
+                    &nbsp;&nbsp;
+                    <button (click)="onPaper()">Paper</button>
+                    &nbsp;&nbsp;
+                    <button (click)="onScissor()">Scissor</button>
+
+               </td>
+               <td>
+                    <br>
+                    <div>
+                         Your Move => <label style="font-style:italic ;">
+                              {{usrmv.userMove==0?"Rock":usrmv.userMove==1?"Paper":"Scissor"}} </label>
+                    </div>
+                    <div>
+                         Computer Move => <label style="font-style:italic ;">
+                              {{usrmv.computerMove==0?"Rock":usrmv.computerMove==1?"Paper":"Scissor"}} </label>
+                    </div>
+                    <div>
+                         Result => <label style="font-style:italic;font-weight:bold;">
+                              {{usrmv.result==0?"Tie":usrmv.result==1?"Win":"Lose"}} </label>
+                    </div>
+
+               </td>
+          </tr>
+          <tr>
+               <td>
+                    <label>Past Moves Results</label>
+                    <table border="1px" >
+                         <thead>
+                              <tr>
+                                   <th>
+                                        Your Move
+                                   </th>
+
+                                   <th>
+                                        Computer Move
+                                   </th>
+
+                                   <th>
+                                        Result
+                                   </th>
+                                   <th>
+                                        Time
+                                   </th>
+                              </tr>
+                         </thead>
+                         <tbody>
+                              <tr *ngFor="let record of gameresult">
+                                   <td>
+                                        {{record.userMove==0?"Rock":record.userMove==1?"Paper":"Scissor"}}
+                                   </td>
+                                   <td>
+
+                                        {{record.computerMove==0?"Rock":record.computerMove==1?"Paper":"Scissor"}}
+                                   </td>
+                                   <td>
+                                        {{record.result==0?"Tie":record.result==1?"Win":"Lose"}}
+                                   </td>
+                                   <td>
+                                        {{record.actionTime | date:'medium' }}
+                                   </td>
+                              </tr>
+                         </tbody>
+                    </table>
+
+               </td>
+          </tr>
+
+     </table>
+</div>
